@@ -17,8 +17,8 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            Get started Ex EX&nbsp;
-            <code className={styles.code}>pages/index.tsx sdfsdgsgdfhdkglsd</code>
+            Get started Ex EX EX&nbsp;
+            {/* <code className={styles.code}>pages/index.tsx sdfsdgsgdfhdkglsd</code> */}
           </p>
           <div>
             <a
