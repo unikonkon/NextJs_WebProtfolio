@@ -54,9 +54,32 @@ export default function Navigatorbar() {
         >
           <AcmeLogo />
           <h1  className="text-orange-800" >
-            ACME
+            Faraday
           </h1>
         </Navbar.Brand>
+        <Navbar.Collapse disableAnimation>
+          {collapseItems.map((item, index) => (
+            <Navbar.CollapseItem
+              key={item}
+              activeColor="warning"
+              css={{
+                color: index === collapseItems.length - 1 ? "$error" : "",
+              }}
+              isActive={index === 2}
+            >
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="#"
+              >
+                {item}
+              </Link>
+            </Navbar.CollapseItem>
+          ))}
+        </Navbar.Collapse>
+        
         <Navbar.Content
           enableCursorHighlight
           activeColor="secondary"
