@@ -43,7 +43,7 @@ export default function Navigatorbar() {
 
   return (
     
-      <Navbar isBordered variant="sticky" className="text-orange-900">
+      <Navbar isBordered variant="sticky" className="text-orange-900 w-full">
         <Navbar.Toggle showIn="xs" />
         <Navbar.Brand
           css={{
@@ -86,12 +86,12 @@ export default function Navigatorbar() {
           hideIn="xs"
           variant="highlight-rounded"
         >
-          <Navbar.Link href="#">Features</Navbar.Link>
-          <Navbar.Link isActive href="#">
-            Customers
+          <Navbar.Link href="/">Home</Navbar.Link>
+          <Navbar.Link  href="/project">
+            Project
           </Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Company</Navbar.Link>
+          <Navbar.Link href="#">Activity</Navbar.Link>
+          <Navbar.Link href="#">Contact Me</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content
           css={{
