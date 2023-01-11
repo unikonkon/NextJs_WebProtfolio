@@ -1,8 +1,8 @@
 
 import Navigatorbar from "./component/navbar";
-import { Link } from "@nextui-org/react";
-export default function project() {
-  const products = [
+
+export default function Activity() {
+  const activity = [
     {
       id: 1,
       head: "แข่ง A-MATH ",
@@ -50,51 +50,33 @@ export default function project() {
     <div className="">
       <Navigatorbar />
       <div className="pt-10   mx-12">
-        <p className="text-3xl">Project </p>
+        <p className="text-3xl">Activity </p>
       </div>
-      <div className="px-10">
-          <p className="pt-7 ">
-            Mobile Application เกี่ยวกับระบบ Security Lock Pin ที่ใช้งานโดยการเปิดปิด Secrity <br/>
-            เมื่อเปิดSecrityแล้ว เวลาปิดแอฟไป เปิดแอฟมาใหม่จะขึ้นหน้า Lock Pin ใส่ Pin ถูกแล้วค่อยเข้ามาในเเอฟได้
-          </p>
-          <p className="pt-7 ">
-            เขียน โดยใช้ ภาษา Dart Framework Flutter 
-      
-          </p>
-          <div className="pt-5">
-      <Link href="https://github.com/unikonkon/Flutter_Auth_Pin_Biometric">
-     GitHub Project Mobile Application
-    </Link>
-      </div>
-        </div>
-       
       <div className="max-w-2xl mx-auto py-5 px-4 sm:py-14 sm:px-6 lg:max-w-7xl lg:px-8">
-       
-        <div className=" grid grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-3  lg:grid-cols-4 xl:gap-x-8">
-          {products.map((product) => (
-            <div key={product.id} className="group relative">
+        <div className=" grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+          {activity.map((activity) => (
+            <div key={activity.id} className="group relative">
               <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
                 <img
-                  src={product.imageSrc}
+                  src={activity.imageSrc}
                   className="w-full h-full object-center object-cover lg:w-full lg:h-full"
                 />
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    {/* <a href={product.href}> */}
+                    {/* <a href={activity.href}> */}
                       <span aria-hidden="true" className="absolute inset-0" />
-                      {product.head}
+                      {activity.head}
                     {/* </a> */}
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.data}</p>
+                  <p className="mt-1 text-sm text-gray-500">{activity.data}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-     
       
     </div>
   );

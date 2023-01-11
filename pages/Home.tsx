@@ -51,11 +51,17 @@ import Navigatorbar from "./component/navbar";
     return (
     
       <div className="z-10 ">
-       
+      
 
         <div className="py-12 bg-white ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="lg:text-center">
+        
+          <div className="justify-center flex ">
+            {/* <Image src="/port2.jpg" width={311} height={425} className="rounded-full " alt={""} />       */}
+       <div className="h-80 w-80 bg-cover bg-center bg-[url('/port2.jpg')] rounded-lg "></div>
+        </div>
+          
+            <div className="lg:text-center pt-5">
               <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               About Me
               </p>

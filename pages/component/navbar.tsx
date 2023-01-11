@@ -1,32 +1,7 @@
-import { Navbar, Link, Text, Avatar, Dropdown, Spacer } from "@nextui-org/react";
-import { styled } from "@nextui-org/react"
 
-
-
-const Box = styled("div", {
-    boxSizing: "border-box",
-  });
-  
-
-
-  const AcmeLogo = () => (
-    <svg
-      className=""
-      fill="none"
-      height="36"
-      viewBox="0 0 32 32"
-      width="36"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect fill="var(--secondary)" height="100%" rx="16" width="100%" />
-      <path
-        clipRule="evenodd"
-        d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-        fill="currentColor"
-        fillRule="evenodd"
-      />
-    </svg>
-  );
+import React from "react";
+import { Navbar, Text, Avatar, Dropdown } from "@nextui-org/react";
+import Link from 'next/link'
 export default function Navigatorbar() {
   const collapseItems = [
     "Profile",
@@ -42,8 +17,8 @@ export default function Navigatorbar() {
   ];
 
   return (
-    
-      <Navbar isBordered variant="sticky" className="text-orange-900 w-full">
+  
+      <Navbar isBordered variant="sticky">
         <Navbar.Toggle showIn="xs" />
         <Navbar.Brand
           css={{
@@ -52,70 +27,70 @@ export default function Navigatorbar() {
             },
           }}
         >
-          <AcmeLogo />
-          <h1  className="text-orange-800" >
-            Faraday
-          </h1>
-        </Navbar.Brand>
-        <Navbar.Collapse disableAnimation>
-          {collapseItems.map((item, index) => (
-            <Navbar.CollapseItem
-              key={item}
-              activeColor="warning"
-              css={{
-                color: index === collapseItems.length - 1 ? "$error" : "",
-              }}
-              isActive={index === 2}
-            >
-              <Link
-                color="inherit"
-                css={{
-                  minWidth: "100%",
-                }}
-                href="#"
-              >
-                {item}
-              </Link>
-            </Navbar.CollapseItem>
-          ))}
-        </Navbar.Collapse>
         
+          <Text b color="inherit" hideIn="xs">
+            ACME
+          </Text>
+        </Navbar.Brand>
         <Navbar.Content
           enableCursorHighlight
-          activeColor="secondary"
+          activeColor="warning"
           hideIn="xs"
-          variant="highlight-rounded"
+          variant="highlight"
         >
-          <Navbar.Link href="/">Home</Navbar.Link>
-          <Navbar.Link  href="/project">
-            Project
+        
+                  <Navbar.Link href="/" >Home
+                  </Navbar.Link>
+           <Navbar.Link  href="/project">
+           Project
           </Navbar.Link>
-          <Navbar.Link href="#">Activity</Navbar.Link>
+          <Navbar.Link href="/Activity">Activity</Navbar.Link>
           <Navbar.Link href="#">Contact Me</Navbar.Link>
         </Navbar.Content>
-        <Navbar.Content
-          css={{
-            "@xs": {
-              w: "12%",
-              jc: "flex-end",
-            },
-          }}
-        >
-      
-            <Navbar.Item>
-            
-                <Avatar
-                  bordered
-                  as="button"
-                  color="secondary"
-                  size="md"
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                />
+       
+        <Navbar.Collapse disableAnimation >
+       
+            <Navbar.CollapseItem>
+              <Link
+                color="inherit"
+               
+                href="/"
+              >
+               Home 
+              </Link>
+              
+            </Navbar.CollapseItem>
+            <Navbar.CollapseItem>
+              <Link
+                color="inherit"
+                
+                href="/Activity"
+              >
+              Activity 
+              </Link>
+            </Navbar.CollapseItem>
+
+            <Navbar.CollapseItem>
+              <Link
+                color="inherit"
+                
+                href="/Activity"
+              >
+               Project 
+              </Link>
+            </Navbar.CollapseItem>
+
+            <Navbar.CollapseItem>
+              <Link
+                color="inherit"
+                
+                href="/ContactMe"
+              >
+              Contact Me
+              </Link>
+            </Navbar.CollapseItem>
              
-            </Navbar.Item>
-           
-        </Navbar.Content>
-      
+        </Navbar.Collapse>
       </Navbar>
    
   );
