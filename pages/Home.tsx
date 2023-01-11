@@ -25,7 +25,7 @@
         
           <div className="justify-center flex ">
             {/* <Image src="/port2.jpg" width={311} height={425} className="rounded-full " alt={""} />       */}
-       <div className="h-80 w-80 bg-cover bg-center bg-[url('/port2.jpg')] rounded-lg border-8 border-gray-50"></div>
+       <div className="h-80 w-80 bg-cover bg-center bg-[url('/port2.jpg')] rounded- border-8 border-gray-50 drop-shadow-md"></div>
         </div>
           
             <div className="lg:text-center pt-5">
@@ -37,30 +37,39 @@
             
                 ผมมีความเข้าใจในการเขียนโปรแกรมภาษา HTML CSS C JavaScript Dart
                และ Framework ReactJS NextJS Flutter Bootstrap Tailwindcss 
-               และมีความเข้าใจในสกุลเงินดิจิตอล Cryptocurrency และ GameFi ที่ใช้เทคโนโลยีบล็อคเชน
+               และมีความสนใจในสกุลเงินดิจิตอล Cryptocurrency และ GameFi ที่ใช้เทคโนโลยีบล็อคเชน
               </p>
             </div>
   
           </div>
         </div>
-  
-        <div className="md:flex-row md:flex flex flex-col bg-pattern bg-cover bg-center h-full pb-20 pt-10 bg-slate-600">
-          <div className="text-white w-full flex flex-col justify-center items-center pt-10 ">
-            <div className="text-3xl ">ประสบการณ์ทำงาน Web Developer</div>
-            <div className="text-2xl pt-2">
+        <div className=" relative  bg-gradient-to-r from-slate-600 to-gray-500">
+          <div className="absolute inset-x-0 top-12 md:right-20 right-0 text-slate-200">
+          <div className="text-3xl  text-center">ประสบการณ์ทำงาน Web Developer</div>
+            <div className="text-2xl pt-2  text-center">
              ระยะเวลา 10 เดือน
             </div>
           </div>
-          <div className="justify-center flex flex-col w-full lg:pl-32 items-center">
-            <div className="md:z-10 md:pt-10 h-20 md:pl-10 pt-10 mx-5">
+       
+          
+        <div className="md:flex-row md:flex flex flex-col bg-pattern bg-cover bg-center h-full pb-20 pt-8 ">
+       
+          <div className=" w-full flex flex-col pt-10 bg-cover bg-center bg-[url('/home.jpg')] rounded-lg ml-4 shadow-md">
+          
+          
+          </div>
+          <div className="justify-center flex flex-col w-full lg:pl-2 items-cente pt-10 ml-10">
+            <div className="md:z-10 md:pt-10 h-20 md:pl-10 pt-10 mx-5 ">
               <Card
                 isHoverable
                 variant="bordered"
-                css={{ mw: "400px", p: "10px", h: "180px", bgBlur: "#fffff66" }}
+                css={{ mw: "400px", p: "10px", h: "180px", bgBlur: "#2F38582C" }}
                 className=""
               >
-                <Card.Body>
-                  <Text>
+                <Card.Body >
+                  <Text  css={{
+                   color: "#FFFFFF",
+                    }}>
                   ได้ทำหน้าที่เกี่ยวกับ เขียนเว็บ Front-end ตามที่ออกแบบมาจากเครื่องมือ Figma โดยใช้ภาษา JavaScript และ Framework ReactJS NextJS 
               
                   </Text>
@@ -71,17 +80,20 @@
               <Card
                 isHoverable
                 variant="bordered"
-                css={{ mw: "400px", p: "10px", h: "140px" }}
+                css={{ mw: "400px", p: "10px", h: "140px", bgBlur: "#2F38582C" }}
                 className=""
               >
                 <Card.Body>
-                  <Text>
+                  <Text css={{
+                   color: "#FFFFFF",
+                    }}>
                   เขียน Mobile Front-end ตามที่ออกแบบมาจากเครื่องมือ Figma โดยใช้ภาษา Dart และ Framework Flutter 
                   </Text>
                 </Card.Body>
               </Card>
             </div>
           </div>
+        </div>
         </div>
       </div>
     );
