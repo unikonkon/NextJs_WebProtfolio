@@ -49,7 +49,7 @@ export default function Activity() {
   return (
     <div className="">
       <Navigatorbar />
-      <div className="pt-10   mx-12">
+      <div className="pt-28 mx-12">
         <p className="text-3xl">Activity </p>
       </div>
       <div className="max-w-2xl mx-auto py-5 px-4 sm:py-14 sm:px-6 lg:max-w-7xl lg:px-8">

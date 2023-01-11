@@ -1,97 +1,97 @@
 
-import React from "react";
-import { Navbar, Text, Avatar, Dropdown } from "@nextui-org/react";
-import Link from 'next/link'
-export default function Navigatorbar() {
-  const collapseItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
 
+import { XCircleIcon,ListBulletIcon } from '@heroicons/react/24/solid'
+import { Disclosure } from "@headlessui/react";
+import Link from "next/link";
+
+
+const navigation = [
+  { name: "Home", href: "/", current: false },
+  { name: "Project", href: "/project", current: false },
+  { name: "Activity", href: "/Activity", current: false },
+  { name: "Contact Me", href: "/ContactMe", current: false },
+
+];
+
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
+
+export default function Example() {
   return (
-  
-      <Navbar isBordered variant="sticky">
-        <Navbar.Toggle showIn="xs" />
-        <Navbar.Brand
-          css={{
-            "@xs": {
-              w: "12%",
-            },
-          }}
-        >
-        
-          <Text b color="inherit" hideIn="xs">
-            ACME
-          </Text>
-        </Navbar.Brand>
-        <Navbar.Content
-          enableCursorHighlight
-          activeColor="warning"
-          hideIn="xs"
-          variant="highlight"
-        >
-        
-                  <Navbar.Link href="/" >Home
-                  </Navbar.Link>
-           <Navbar.Link  href="/project">
-           Project
-          </Navbar.Link>
-          <Navbar.Link href="/Activity">Activity</Navbar.Link>
-          <Navbar.Link href="#">Contact Me</Navbar.Link>
-        </Navbar.Content>
-       
-        <Navbar.Collapse disableAnimation >
-       
-            <Navbar.CollapseItem>
-              <Link
-                color="inherit"
-               
-                href="/"
-              >
-               Home 
-              </Link>
-              
-            </Navbar.CollapseItem>
-            <Navbar.CollapseItem>
-              <Link
-                color="inherit"
-                
-                href="/Activity"
-              >
-              Activity 
-              </Link>
-            </Navbar.CollapseItem>
+    <Disclosure as="nav" className="bg-gradient-to-r from-slate-600/30 to-gray-500/30 fixed w-full z-10 drop-shadow-md backdrop-blur-sm ">
+      {({ open }) => (
+        <>
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
+            <div className="relative flex items-center justify-between h-16">
+              <div className="absolute inset-y-0 left-0 flex items-center ">
+                {/* Image*/}
+                <div className="inline-flex items-center justify-center ">
+                  <Link href="/">
+                    <div className="h-10 w-10 bg-cover bg-[url('/port2.jpg')] rounded-full"></div>
+                    {/* <Image src="/port1.jpg" width={40} height={30} className="rounded-full " alt={""} />  */}
+                    
+                  </Link>
+                </div>
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  {open ? (
+                    <XCircleIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <ListBulletIcon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
 
-            <Navbar.CollapseItem>
-              <Link
-                color="inherit"
-                
-                href="/Activity"
-              >
-               Project 
-              </Link>
-            </Navbar.CollapseItem>
+              <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-end">
+                <div className="hidden md:block md:ml-6">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-800 hover:bg-gray-800 hover:text-white",
+                          "px-3 py-2 rounded-md text-sm font-medium"
+                        )}
+                        aria-current={item.current ? "page" : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <Navbar.CollapseItem>
-              <Link
-                color="inherit"
-                
-                href="/ContactMe"
-              >
-              Contact Me
-              </Link>
-            </Navbar.CollapseItem>
-             
-        </Navbar.Collapse>
-      </Navbar>
-   
+          <Disclosure.Panel className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block px-3 py-2 rounded-md text-base font-medium"
+                  )}
+                  aria-current={item.current ? "page" : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   );
 }

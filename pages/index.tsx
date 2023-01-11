@@ -10,7 +10,7 @@ export default function index() {
     <div className="font-sana ">
       <link href="/dist/output.css" rel="stylesheet"></link>
       <Navigatorbar/>
-      <div className="bg-slate-600">
+      <div className="pt-16">
       <Home/>
       </div>
      
