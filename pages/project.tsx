@@ -49,7 +49,7 @@ export default function project() {
   return (
     <div className="">
       <Navigatorbar />
-      <div className="pt-10   mx-12">
+      <div className="pt-24 mx-12">
         <p className="text-3xl">Project </p>
       </div>
       <div className="px-10">
