@@ -47,10 +47,10 @@ export default function Activity() {
     },
   ];
   return (
-    <div className="">
+    <div className="bg-[url('/bg2.jpg')] bg-center ">
       <Navigatorbar />
       <div className="pt-28 mx-12">
-        <p className="text-3xl">Activity </p>
+        <p className="text-3xl font-extrabold">Activity </p>
       </div>
       <div className="max-w-2xl mx-auto py-5 px-4 sm:py-14 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className=" grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">

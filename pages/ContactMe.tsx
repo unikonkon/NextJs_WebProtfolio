@@ -8,9 +8,9 @@ import Image from "next/image";
 
 export default function contactme() {
     return (
-        <div>
+        <div className="bg-[url('/bg2.jpg')] bg-center">
          <Navigatorbar />
-        <div className="pt-32 text-center text-4xl">
+        <div className="pt-32 text-center text-4xl font-extrabold">
         CONTACT ME
         </div>
         <div className="pt-10 flex justify-center">

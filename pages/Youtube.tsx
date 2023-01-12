@@ -46,10 +46,10 @@ export default function youtube() {
         },
       ];
     return(
-        <div className="">
+        <div className="bg-[url('/bg2.jpg')] bg-center">
       <Navigatorbar />
       <div className="pt-28 text-center">
-        <p className="text-3xl">Video Content Creator </p>
+        <p className="text-3xl font-extrabold">Video Content Creator </p>
         
         <p className="text-2xl pt-4">YouTube: FaradayBanana</p>
        <div className="">
