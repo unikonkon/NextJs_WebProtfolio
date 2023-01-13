@@ -11,7 +11,8 @@
   } from "@nextui-org/react";
   import Image from "next/image";
   import React from "react";
-  import CodeIcon from '@mui/icons-material/Code';
+import Link from "next/link";
+import GitHubIcon from '@mui/icons-material/GitHub';
   
   export default function Home() {
   
@@ -41,13 +42,31 @@
           </div>
         </div>
         <div className=" pt-6 relative  bg-gradient-to-r from-slate-600 to-gray-500">
-          <div className="absolute inset-x-0 top-12 md:right-20 right-0 text-slate-100 font-extrabold">
-          <div className="text-3xl pt-6 text-center">ประสบการณ์ทำงาน Web Developer</div>
+          <div className="absolute inset-x-0 top-12 md:right-20 right-0 text-gray-100 font-extrabold">
+          <div className="text-3xl pt-6 text-center ">ประสบการณ์ทำงาน Web Developer</div>
             <div className="text-2xl pt-2  text-center">
              ระยะเวลา 10 เดือน
             </div>
+            <div className="md:z-30 flex justify-center md:pt-56 md:pl-32 pt-2">
+            <Link href="https://github.com/unikonkon"> 
+            <Card
+                isHoverable
+                variant="bordered"
+                css={{ w: "115px", h: "115px", bgBlur: "#70758F83" }}
+                className="shadow-md"
+              >
+                <Card.Body>
+                  <div  className="flex justify-center ">
+                  <GitHubIcon sx={{ fontSize: 40 }} className=""/>  
+                    </div>                 
+                   <Text css={{ color: "#FDF6F6", fontWeight: "$semibold", fontSize: "$sm" }}
+                    className="text-center pt-2">Link GitHub </Text>                         
+                </Card.Body>
+              </Card>
+              </Link>
+            </div>
           </div>       
-          
+      
         <div className="md:flex-row md:flex flex flex-col bg-pattern bg-cover 
         bg-center h-full pb-16 pt-8 ">
        
@@ -55,8 +74,8 @@
            bg-center bg-[url('/home.jpg')] rounded-lg shadow-md ">    
           </div>
       
-        
-          <div className="justify-center flex flex-col w-full lg:pl-2 items-center md:pt-10 z-0">
+         
+          <div className="justify-center flex flex-col w-full lg:pl-2 items-center md:pt-10 z-0 ">
             <div className="md:z-10 md:pt-10 h-20 md:pl-10 pt-10 mx-5 ">
               <Card
                 isHoverable
@@ -73,7 +92,7 @@
                 </Card.Body>
               </Card>
             </div>
-            <div className="md:z-20 md:pt-24 pt-44 mx-5 md:pr-20 ">
+            <div className="md:z-20 md:pt-24 pt-36 mx-5 md:pr-20 ">
               <Card
                 isHoverable
                 variant="bordered"
@@ -87,14 +106,19 @@
                   เขียน Mobile Front-end ตามที่ออกแบบมาจากเครื่องมือ Figma โดยใช้ภาษา Dart และ Framework Flutter 
                   </Text>
                 </Card.Body>
-              </Card>
+              </Card>   
             </div>
+    
           </div>
+         
         </div>
-        <div className="text-3xl text-center font-extrabold pb-8">Skills</div>
+       
+        <div className="text-3xl text-center font-extrabold pb-8 md:pt-16 pt-1">Skills</div>
+
+
 
     <div className="hidden sm:block">              
-    <div className="flex justify-center pb-8 ">
+    <div className="flex justify-center pb-8">
         <Card
                 isHoverable
                 variant="bordered"
@@ -179,7 +203,7 @@
                   bottom: 0,
                   zIndex: 1,
                     }}>
-                 Git Version Control , VSCode , Figma , Slack , Diagrams.net , Confluence Jira Software
+                 Git Version Control , VSCode , Figma , Slack , Diagrams.net , Confluence Jira Software , Vercel
                   </Text>
         </Card.Body>
       </Card>     
@@ -274,7 +298,7 @@
                   bottom: 0,
                   zIndex: 1,
                     }}>
-                 Git Version Control , VSCode , Figma , Slack , Diagrams.net , Confluence Jira Software
+                 Git Version Control , VSCode , Figma , Slack , Diagrams.net , Confluence Jira Software , Vercel
                   </Text>
         </Card.Body>
       </Card>     
