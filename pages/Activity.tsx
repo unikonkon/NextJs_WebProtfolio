@@ -47,7 +47,7 @@ export default function Activity() {
     },
   ];
   return (
-    <div className="bg-[url('/bg2.jpg')] bg-center ">
+    <div className="bg-[url('/bg1.jpg')] bg-center ">
       <Navigatorbar />
       <div className="pt-28 mx-12">
         <p className="text-3xl font-extrabold">Activity </p>

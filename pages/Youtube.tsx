@@ -46,7 +46,7 @@ export default function youtube() {
         },
       ];
     return(
-        <div className="bg-[url('/bg2.jpg')] bg-center">
+        <div className="bg-[url('/bg1.jpg')] bg-center">
       <Navigatorbar />
       <div className="pt-28 text-center">
         <p className="text-3xl font-extrabold">Video Content Creator </p>
