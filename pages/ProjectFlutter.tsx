@@ -1,7 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Navigatorbar from "./component/navbar";
 import { Link } from "@nextui-org/react";
-export default function project() {
+export default function ProjectFlutter() {
   const products = [
     {
       id: 1,
@@ -172,10 +172,10 @@ export default function project() {
     }, 
   ];
   return (
-    <div className="pb-10 bg-[url('/bg1.jpg')] bg-center">
+    <div className="pb-10 bg-[url('/bg2.jpg')] bg-cover">
       <Navigatorbar />
-      <div className="pt-24 mx-12">
-        <p className="text-3xl font-extrabold">Project </p>
+      <div className="pt-28 text-center">
+        <p className="text-3xl font-extrabold">Project Flutter </p>
       </div>
       <div className="px-10">
           <p className="pt-7 text-lg">
@@ -197,7 +197,7 @@ export default function project() {
            <p className="pb-8 text-gray-900 text-lg">
             ขั้นตอนการเปิด Security
             </p>
-        <div className=" grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-4  lg:grid-cols-6 xl:gap-x-8">
+        <div className=" grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-4  lg:grid-cols-6 xl:gap-x-8 ">
         
           {products.map((product) => (
             <div key={product.id} className="group relative">
