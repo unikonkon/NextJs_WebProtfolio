@@ -127,7 +127,7 @@ export default function ProjectReact() {
       </div>
       <div className="px-10">
           <p className="pt-7 text-lg">
-           1. Web Application เกี่ยวกับระบบ Login ที่ติต่อกับฐานข้อมูล MySQL <br/>
+          Web LogIn เกี่ยวกับระบบ Login ที่ติดต่อกับฐานข้อมูล MySQL <br/>
            โดยเมื่อ login แล้วจะเข้าไปหน้า User และ มีหน้า SignUp ที่กรอกข้อมูล แล้วสามารถนำข้อมูลไปใส่หน้า Login แล้วจะเข้ามาหน้า User ได้
           </p>
           <p className="pt-7 ">
