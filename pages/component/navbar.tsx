@@ -7,7 +7,8 @@ import Link from "next/link";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  { name: "Project", href: "/project", current: false },
+  { name: "Project ReactJS", href: "/ProjectReact", current: false },
+  { name: "Project Flutter", href: "/ProjectFlutter", current: false },
   { name: "Activity", href: "/Activity", current: false },
   { name: "Youtube", href: "/Youtube", current: false },
   { name: "Contact Me", href: "/ContactMe", current: false },
