@@ -182,8 +182,8 @@ export default function ProjectReact() {
       <div className="px-10">
           <p className="pt-7 text-lg">
           <p className="text-xl pb-3">1. Web Rest API CRUD</p>
-          การทำ CRUD ข้อมูล ซึ่งประกอบไปด้วย Create สร้าง, Read อ่าน, Update แก้ไข และ Delete : ลบ<br/>
-            เรียกใช้ข้อมูลผ่านการใช้ API 
+          การทำ CRUD ข้อมูล ซึ่งประกอบไปด้วย Create : สร้าง, Read : อ่าน, Update : แก้ไข และ Delete : ลบ<br/>
+            เรียกใช้ข้อมูลผ่านการใช้ API ที่ให้บริการอยู่บนเว็บ https://www.melivecode.com/
           </p>
           <p className="pt-7 text-lg">
             เขียน โดยใช้ ภาษา JavaScript Framework ReactJS  
