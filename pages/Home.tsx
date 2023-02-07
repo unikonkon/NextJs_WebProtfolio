@@ -33,8 +33,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
               </p>
               <p className="mt-4 max-w-2xl text-xl text-gray-800 lg:mx-auto">
                 สวัสดีครับ ผมชื่อ นาย สุเทพ จันทวี ชื่อเล่น กล้วย จบการศึกษาจาก มหาวิทยาลัยเทคโนโลยีสุรนารี สาขาวิศวกรรมอิเล็กทรอนิกส์ <br />           
-                ผมมีความเข้าใจในการเขียนโปรแกรมภาษา HTML CSS C JavaScript Dart
-                และ Framework ReactJS NextJS Flutter Bootstrap Tailwindcss NextUI
+                ผมมีความเข้าใจในการเขียนโปรแกรมภาษา HTML CSS C JavaScript Dart SQL
+                และ Framework ReactJS NextJS Flutter Bootstrap Tailwindcss NextUI Material-UI
                 และมีความสนใจในสกุลเงินดิจิตอล Cryptocurrency และ GameFi ที่ใช้เทคโนโลยีบล็อคเชน
               </p>
             </div>
@@ -144,7 +144,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
                   bottom: 0,
                   zIndex: 1,
                     }}>
-                  HTML CSS C JavaScript Dart             
+                  HTML CSS C JavaScript Dart SQL             
                   </Text>
         </Card.Body>
       </Card>     
@@ -173,7 +173,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
                   bottom: 0,
                   zIndex: 1,
                     }}>
-                 ReactJS NextJS Flutter Bootstrap Tailwindcss NextUI          
+                 ReactJS NextJS Flutter Bootstrap Tailwindcss NextUI Material-UI          
                   </Text>
         </Card.Body>
       </Card>     
