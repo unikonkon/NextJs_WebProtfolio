@@ -85,8 +85,31 @@ export default function ProjectReact() {
       imageSrc: "ReactJS4.png",
       data: " ",
     },
-   
-   
+  ];
+
+
+  const dog = [
+    {
+      id: 1,
+      head: "หน้า Login",
+      href: "#",
+      imageSrc: "/dog1.png",
+      data: " ",
+    },
+    {
+      id: 2,
+      head: "หน้า Username",
+      href: "#",
+      imageSrc: "dog2.png",
+      data: " ",
+    },
+    {
+      id: 3,
+      head: "แสดงข้อมูลรูปหมา",
+      href: "#",
+      imageSrc: "dog3.png",
+      data: " ",
+    }
   ];
 
   const runProducts = [
@@ -179,9 +202,10 @@ export default function ProjectReact() {
         <p className="text-3xl font-extrabold">Project ReactJS </p>
       </div>
 
+      {/* 1. */}
       <div className="px-10">
           <p className="pt-7 text-lg">
-          <p className="text-xl pb-3">1. Web Rest API CRUD</p>
+          <p className="text-xl pb-3 font-semibold">1. Web Rest API CRUD</p>
           การทำ CRUD ข้อมูล ซึ่งประกอบไปด้วย Create : สร้าง, Read : อ่าน, Update : แก้ไข และ Delete : ลบ<br/>
             เรียกใช้ข้อมูลผ่านการใช้ API ที่ให้บริการอยู่บนเว็บ https://www.melivecode.com/
           </p>
@@ -207,7 +231,7 @@ export default function ProjectReact() {
            <p className="pb-8 text-gray-900 text-lg px-10 pt-8">
             ตัวอย่าง Web RestAPI CRUD
             </p>
-        <div className=" grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2  lg:grid-cols-3 xl:gap-x-4 px-8">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2  lg:grid-cols-3 xl:gap-x-4 px-8">
         
           {reactCRUD.map((product) => (
             <div key={product.id} className="group relative">
@@ -234,10 +258,65 @@ export default function ProjectReact() {
       </div>
 
 
-      {/* 2. */}
+        {/* 2. */}
+        <div className="px-10">
+          <p className="pt-7 text-lg">
+          <p className="text-xl pb-3 font-semibold">2. Web Save IMG Dog</p>
+          Web ที่ login เข้าไปแล้วจะแสดงภาพหมาแบบสุ่มจาก API สามารถ บันทึก ลบ โหลดภาพหมาอันใหม่ได้ และแสดงภาพหมาทั้งหมดที่บันทึก
+           </p>
+          <p className="pt-7 text-lg">
+            เขียน โดยใช้ ภาษา JavaScript Framework ReactJS  
+          </p>
+         <div className="pt-8">
+            <Link href="https://github.com/unikonkon/react_save_dog_app">
+            <GitHubIcon className="mr-4 w-10 h-10"/>   GitHub Web Project Save IMG Dog
+            </Link>
+         </div>
+         <div className="pt-3">
+            <Link href="https://react-savedogapp.vercel.app/">
+            <LanguageIcon className="mr-4 w-10 h-10 text-sky-600"/>
+            <p className="text-sky-600">
+            Link Web Project Save IMG Dog
+            </p> 
+            </Link>
+         </div>
+        </div>
+       
+      <div className="pb-12 sm:pb-10">
+           <p className="pb-8 text-gray-900 text-lg px-10 pt-8">
+            ตัวอย่าง Web Save IMG Dog
+            </p>
+        <div className=" grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2  lg:grid-cols-3 xl:gap-x-4 px-8">
+        
+          {dog.map((product) => (
+            <div key={product.id} className="group relative">
+              <div className="w-full   bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75  lg:aspect-none">
+                <img
+                  src={product.imageSrc}
+                  className="w-full h-full object-center object-contain lg:w-full lg:h-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between text-center">
+                <div>
+                  <h3 className="text-sm text-gray-700 ">
+                    {/* <a href={product.href}> */}
+                      <span aria-hidden="true" className="absolute inset-0 text-center" />
+                      {product.head}
+                    {/* </a> */}
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500">{product.data}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      {/* 3. */}
       <div className="px-10">
           <p className="pt-10 text-lg">
-         <p className="text-xl pb-3">2.  Web LogIn  </p>
+         <p className="text-xl pb-3 font-semibold">3. Web LogIn  </p>
          เกี่ยวกับระบบ Login ที่ติดต่อกับฐานข้อมูล MySQL โดยเมื่อ login แล้วจะเข้าไปหน้า User และ มีหน้า SignUp ที่กรอกข้อมูล แล้วสามารถนำข้อมูลไปใส่หน้า Login แล้วจะเข้ามาหน้า User ได้
           </p>
           <p className="pt-7 ">
