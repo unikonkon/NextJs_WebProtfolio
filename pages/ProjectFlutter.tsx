@@ -171,6 +171,32 @@ export default function ProjectFlutter() {
       data: " ",
     }, 
   ];
+
+  // 3.
+  const productsAPI = [
+    {
+      id: 1,
+      head: "หน้า กำลังโหลดข้อมูล",
+      href: "#",
+      imageSrc: "flutterapi1.png",
+      data: " ",
+    },
+    {
+      id:2,
+      head: "หน้าแสดงข้อมูล",
+      href: "#",
+      imageSrc: "flutterapi2.png",
+      data: " ",
+    },   
+    {
+      id:3,
+      head: "หน้าเเสดงข้อมูลเพิ่มเติม",
+      href: "#",
+      imageSrc: "flutterapi3.png",
+      data: " ",
+    }, 
+  
+  ];
   return (
     <div className="pb-10 bg-[url('/bg2.jpg')] bg-cover">
       <Navigatorbar />
@@ -178,7 +204,7 @@ export default function ProjectFlutter() {
         <p className="text-3xl font-extrabold">Project Flutter </p>
       </div>
       <div className="px-10">
-          <p className="pt-7 text-lg">
+          <p className="pt-14 text-lg font-semibold">
            1. Mobile Application เกี่ยวกับระบบ Security Lock Pin ที่ใช้งานโดยการเปิดปิด Secrity <br/>
             เมื่อเปิด Secrity เวลาปิดแอฟไป เมื่อเปิดแอฟมาใหม่จะขึ้นหน้า Lock Pin ใส่ Pin ถูกแล้วค่อยเข้ามาในเเอฟได้
           </p>
@@ -309,8 +335,10 @@ export default function ProjectFlutter() {
           ))}
         </div>
       </div>
+
+      {/* 2. */}
       <div className="px-10">
-          <p className="pt-20 text-lg">
+          <p className="pt-20 text-lg font-semibold">
            2. Mobile Application เกี่ยวกับการกรอกข้อมูล โดยใช้ stepper flutter แล้วแสดงข้อมูลออกมาเป็น List
             
           </p>
@@ -332,6 +360,54 @@ export default function ProjectFlutter() {
         <div className=" grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-4  lg:grid-cols-6 xl:gap-x-8">
         
           {productsStep.map((product) => (
+            <div key={product.id} className="group relative">
+              <div className="w-full min-h-80  bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <img
+                  src={product.imageSrc}
+                  className="w-full h-full object-center object-contain lg:w-full lg:h-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between text-center">
+                <div>
+                  <h3 className="text-sm text-gray-700 ">
+                    {/* <a href={product.href}> */}
+                      <span aria-hidden="true" className="absolute inset-0 text-center" />
+                      {product.head}
+                    {/* </a> */}
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500">{product.data}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+            {/* 3. */}
+        <div className="px-10">
+          <p className="pt-20 text-lg font-semibold">
+           3. Mobile Application เกี่ยวกับการดึงข้อมูลมาจาก API แล้วแสดงข้อมูลออกมาเป็น List
+            
+          </p>
+          <p className="pt-7 ">
+            เขียน โดยใช้ ภาษา Dart Framework Flutter  
+      
+          </p>
+           <div className="pt-5">
+            <Link href="https://github.com/unikonkon/Flutter_API_DataList">
+            <GitHubIcon className="mr-4 w-10 h-10"/>   GitHub Project Mobile Application API Data
+            </Link>
+      </div>
+        </div>
+
+        <div className="max-w-2xl mx-auto py-4 px-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:px-8">
+           <p className="pb-8 text-gray-900 text-lg">
+            หน้าแอฟเเสดงผล
+            </p>
+        <div className=" grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-4  lg:grid-cols-6 xl:gap-x-8">
+        
+          {productsAPI.map((product) => (
             <div key={product.id} className="group relative">
               <div className="w-full min-h-80  bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
                 <img
